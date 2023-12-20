@@ -40,7 +40,7 @@ xizhi_token="$XIZHI_TOKEN"
   fi
 
   title="大学习更新-$pub_date"
-  content="$title_value：\[http://hnqndaxuexi.dahejs.cn/study/studyList\]({http://hnqndaxuexi.dahejs.cn/study/studyList})"
+  content="$title_value：[http://hnqndaxuexi.dahejs.cn/study/studyList](http://hnqndaxuexi.dahejs.cn/study/studyList)"
   
 # 使用 curl 发送 POST 请求 频道推送
 push_response=$(curl -s -X POST "https://xizhi.qqoq.net/${xizhi_token}.channel?" -d "title=${title}&content=${content}")
