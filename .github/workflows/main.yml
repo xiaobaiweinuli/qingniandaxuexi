@@ -26,10 +26,11 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Execute script
+      - name: Execute xizhi.sh
+        run: |
+          ./xizhi.sh
         env:
-          YOUR_PUSHPLUS_TOKEN: ${{ secrets.YOUR_PUSHPLUS_TOKEN }}
-        run: bash qndxx.sh
+          xizhi_token: ${{ secrets.xizhi_token }}
         
       #- name: Execute wxpusher.sh
       #  run: |
