@@ -32,12 +32,12 @@ if [ "$pub_date" == "$current_date" ]; then
   echo "日期相同，发送 WxPusher 通知..."
 
   # 从环境变量中获取 WxPusher Token
-  #WxPusher_token=$WxPusher_TOKEN
+  WxPusher_token=$WXPUSHER_TOKEN
 
- # if [ -z "$WxPusher_token" ]; then
-   # echo "未设置 WxPusher Token，请设置环境变量 WxPusher_TOKEN"
-    #exit 1
- # fi
+  if [ -z "$WxPusher_token" ]; then
+    echo "未设置 WXPUSHER_TOKEN，请设置环境变量 WXPUSHER_TOKEN"
+    exit 1
+  fi
 
   title="大学习更新-$pub_date"
   content="$title_value:http://hnqndaxuexi.dahejs.cn/study/studyList"
