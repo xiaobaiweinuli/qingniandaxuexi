@@ -9,6 +9,10 @@ on:
         description: '手动触发工作流'
         required: false
 
+  push:
+    paths:
+      - '.github/workflows/main.yml'  # 当 main.yml 文件发生变化时触发
+      
 jobs:
   run-script:
     runs-on: ubuntu-latest
@@ -26,3 +30,10 @@ jobs:
         env:
           YOUR_PUSHPLUS_TOKEN: ${{ secrets.YOUR_PUSHPLUS_TOKEN }}
         run: bash qndxx.sh
+        
+      #- name: Execute wxpusher.sh
+      #  run: |
+      #    chmod +x wxpusher.sh
+      #    ./wxpusher.sh
+      #  env:
+      #    wxpusher_token: ${{ secrets.wxpusher_token }}   另加脚本和环境变量
