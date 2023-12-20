@@ -27,8 +27,7 @@ jobs:
           node-version: '14'
 
       - name: Execute xizhi.sh
-        run: |
-          ./xizhi.sh
+        run: bsah xizhi.sh
         env:
           xizhi_token: ${{ secrets.xizhi_token }}
         
