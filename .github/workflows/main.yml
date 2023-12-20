@@ -28,7 +28,7 @@ jobs:
 
       - name: Execute xizhi.sh
         env:
-          xizhi_token: ${{ secrets.xizhi_token }}
+          XIZHI_TOKEN: ${{ secrets.XIZHI_TOKEN }}
         run: bash xizhi.sh
         
         
