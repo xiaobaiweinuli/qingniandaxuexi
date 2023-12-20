@@ -24,5 +24,5 @@ jobs:
 
       - name: Execute script
         env:
-          YOUR_PUSHPLUS_TOKEN: ${{ secrets.PASSWD }}
+          YOUR_PUSHPLUS_TOKEN: ${{ secrets.YOUR_PUSHPLUS_TOKEN }}
         run: bash qndxx.sh
