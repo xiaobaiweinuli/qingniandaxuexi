@@ -29,7 +29,9 @@ echo "提取 title 的值：$title_value"
 current_date=$(date +"%Y-%m-%d")
 echo "当前日期：$current_date"
 
-
+# 比较两个日期是否相同
+if [ "$pub_date" == "$current_date" ]; then
+  echo "日期相同，发送 PushPlus 通知..."
 
   # 使用环境变量 xizhi_token
 xizhi_token="$XIZHI_TOKEN"
@@ -47,3 +49,6 @@ push_response=$(curl -s -X POST "https://xizhi.qqoq.net/${xizhi_token}.channel?"
   
   echo "息知 响应：$push_response"
   echo "推送通知已发送"
+else
+  echo "日期不相同，不执行后续操作"
+fi
