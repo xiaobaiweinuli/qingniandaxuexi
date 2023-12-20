@@ -25,11 +25,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '14'
-
-      - name: Execute xizhi.sh
+          
+      - name: Execute pushplus
         env:
-          XIZHI_TOKEN: ${{ secrets.XIZHI_TOKEN }}
-        run: bash xizhi.sh
+          YOUR_PUSHPLUS_TOKEN: ${{ secrets.YOUR_PUSHPLUS_TOKEN }}
+        run: bash qndxx.sh
+
+      #- name: Execute xizhi.sh
+      #  env:
+      #    XIZHI_TOKEN: ${{ secrets.XIZHI_TOKEN }}
+       # run: bash xizhi.sh
         
         
       #- name: Execute wxpusher.sh
