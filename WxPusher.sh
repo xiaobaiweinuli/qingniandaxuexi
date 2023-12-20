@@ -50,8 +50,6 @@ data='{"appToken":"'$WxPusher_token'","content":"'$content'","summary":"'$title'
 
 response=$(curl -X POST -H "Content-Type: application/json" -d "${data}" "${url}")
 echo "WxPusher 响应：$response"
-  
-  echo "WxPusher 响应：$push_response"
   echo "推送通知已发送"
 else
   echo "日期不相同，不执行后续操"
