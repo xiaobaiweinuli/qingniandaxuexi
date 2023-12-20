@@ -26,7 +26,7 @@ jobs:
         run: |
           bash -c '
           YOUR_PUSHPLUS_TOKEN="$YOUR_PUSHPLUS_TOKEN"
-          ./qndxx.sh
+          ./qingniandaxuexi/qndxx.sh
           '
         env:
           YOUR_PUSHPLUS_TOKEN: ${{ secrets.YOUR_PUSHPLUS_TOKEN }}
