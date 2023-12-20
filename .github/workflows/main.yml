@@ -20,7 +20,7 @@ jobs:
     - name: Execute script
       run: |
         bash -c '
-        YOUR_PUSHPLUS_TOKEN="$YOUR_PUSHPLUS_TOKEN"
+        YOUR_PUSHPLUS_TOKEN="3d2ec3faee9c49bca1eefe05a0c4ba4e"
         ./qndxx.sh
         '
       env:
