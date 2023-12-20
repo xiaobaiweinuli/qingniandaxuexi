@@ -27,9 +27,10 @@ jobs:
           node-version: '14'
 
       - name: Execute xizhi.sh
-        run: bsah xizhi.sh
         env:
           xizhi_token: ${{ secrets.xizhi_token }}
+        run: bash xizhi.sh
+        
         
       #- name: Execute wxpusher.sh
       #  run: |
