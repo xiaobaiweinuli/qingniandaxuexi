@@ -23,10 +23,6 @@ jobs:
           node-version: '14'
 
       - name: Execute script
-        run: |
-          bash -c '
-          YOUR_PUSHPLUS_TOKEN="$YOUR_PUSHPLUS_TOKEN"
-          qndxx.sh
-          '
         env:
-          YOUR_PUSHPLUS_TOKEN: ${{ secrets.YOUR_PUSHPLUS_TOKEN }}
+          YOUR_PUSHPLUS_TOKEN: ${{ secrets.PASSWD }}
+        run: bash qndxx.sh
