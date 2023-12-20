@@ -2,7 +2,7 @@ name: Daily Notification
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 每天午夜 UTC 时间执行
+    - cron: '30 11,12,14,18 * * *'  # 时间执行
   workflow_dispatch:  # 允许手动触发
     inputs:
       manual_trigger:
@@ -26,15 +26,15 @@ jobs:
         with:
           node-version: '14'
           
-      #- name: Execute pushplus
-      #  env:
-      #    YOUR_PUSHPLUS_TOKEN: ${{ secrets.YOUR_PUSHPLUS_TOKEN }}
-      #  run: bash qndxx.sh
-
-      - name: Execute xizhi.sh
+      - name: Execute pushplus
         env:
-          XIZHI_TOKEN: ${{ secrets.XIZHI_TOKEN }}
-        run: bash xizhi.sh
+          YOUR_PUSHPLUS_TOKEN: ${{ secrets.YOUR_PUSHPLUS_TOKEN }}
+        run: bash qndxx.sh
+
+      #- name: Execute xizhi.sh
+      #  env:
+      #    XIZHI_TOKEN: ${{ secrets.XIZHI_TOKEN }}
+      #  run: bash xizhi.sh
         
         
       #- name: Execute wxpusher.sh
