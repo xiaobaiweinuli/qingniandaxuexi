@@ -26,7 +26,7 @@ jobs:
 
       #- name: Execute xizhi.sh
       #  env:
-      #    XIZHI_TOKEN: ${{ secrets.XIZHI_TOKEN }}
+      #    XIZHI_TOKEN: ${{ secrets.XIZHI_TOKEN }} 
       #  run: bash xizhi.sh
         
         
@@ -36,3 +36,15 @@ jobs:
       #    ./wxpusher.sh
       #  env:
       #    wxpusher_token: ${{ secrets.wxpusher_token }}   另加脚本和环境变量
+#on: 
+#  schedule: 
+#    - cron: '25 12,13,15 * * *'  # 时间执行
+#  workflow_dispatch:  # 允许手动触发
+#    inputs: 
+#      manual_trigger: 
+#        description: '手动触发工作流'
+#        required: false 
+#
+#  push:
+#    paths:
+#      - '.github/workflows/main.yml'  # 当 main.yml 文件发生变化时触发
