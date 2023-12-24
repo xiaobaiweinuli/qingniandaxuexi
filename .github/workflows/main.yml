@@ -2,7 +2,7 @@ name: Daily Notification
 
 on:
   schedule:
-    - cron: '20 6,7,8 * * *'   # 时间执行
+    - cron: '15,46 6,7,8 * * *'   # 时间执行
   workflow_dispatch:  # 允许手动触发
 
       
