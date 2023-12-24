@@ -2,7 +2,7 @@ name: Daily Notification
 
 on:
   schedule:
-    - cron: "32 12,13,15 * * *"  # UTC+8的时间执行：当前时间减8
+    - cron: " 32 12,13,15 * * * "  # UTC+8的时间执行：当前时间减8
   workflow_dispatch:  # 允许手动触发
 
       
@@ -10,20 +10,28 @@ jobs:
   run-script:
     runs-on: ubuntu-latest
     env:
-      TZ: 'Asia/Shanghai'  # 设置时区为上海（东八区）
+      TZ: "Asia/Shanghai"  # 设置时区为上海（东八区）
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Debug
+         run:| 
+            echo "Running Debug..."  
+            date  
+            echo "Current timezone:$TZ " 
+            echo "Current directory:$(pwd) " 
+            ls -la 
+
+      - name: Checkout code 
+        uses: actions/checkout@v2 
 
       - name: Set up Bash
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v3 
         with:
           node-version: '14'
           
-      - name: Execute pushplus
+      - name: Execute pushplus 
         env:
-          YOUR_PUSHPLUS_TOKEN: ${{ secrets.YOUR_PUSHPLUS_TOKEN }}
-        run: bash qndxx.sh
+          YOUR_PUSHPLUS_TOKEN: ${{ secrets.YOUR_PUSHPLUS_TOKEN }} 
+        run: bash qndxx.sh 
 
       #- name: Execute xizhi.sh
       #  env:
