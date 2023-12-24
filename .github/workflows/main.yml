@@ -13,7 +13,7 @@ jobs:
       TZ: "Asia/Shanghai"  # 设置时区为上海（东八区）
     steps:
       - name: Debug
-         run:| 
+         run:
             echo "Running Debug..."  
             date  
             echo "Current timezone:$TZ " 
