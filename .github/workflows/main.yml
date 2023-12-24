@@ -2,27 +2,27 @@ name: Daily Notification
 
 on:
   schedule:
-    - cron: "32 12,13,15 * * *"  # UTC+8的时间执行：当前时间减8
+    - cron: "25 12,13,15 * * *"  # 时间执行
   workflow_dispatch:  # 允许手动触发
 
       
 jobs:
   run-script:
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
+
     steps:
-    
-      - name: Checkout code  
+      - name: Checkout code
         uses: actions/checkout@v2
-        
+
       - name: Set up Bash
         uses: actions/setup-node@v3
         with:
-         node-version: 14             
+          node-version: '14'
           
-      - name: Execute pushplus   
+      - name: Execute pushplus
         env:
           YOUR_PUSHPLUS_TOKEN: ${{ secrets.YOUR_PUSHPLUS_TOKEN }} 
-        run: bash qndxx.sh  
+        run: bash qndxx.sh
       #- name: Execute xizhi.sh 
       #  env:
       #    XIZHI_TOKEN: ${{ secrets.XIZHI_TOKEN }}  
