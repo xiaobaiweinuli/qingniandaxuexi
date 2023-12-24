@@ -9,30 +9,24 @@ on:
 jobs:
   run-script:
     runs-on: ubuntu-latest
-    env:
-      TZ: "Asia/Shanghai"  # 设置时区为上海（东八区）
     steps:
 
       - name: Checkout code 
-        uses: actions/checkout@main
-
-      - name: Set up Bash
-        uses: actions/setup-node@v4   
+        uses: actions/checkout@v2
         with:
-          node-version: '14'
+          ref: mian     
+      - name: Set up Bash
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14  
           
-      - name: Execute pushplus 
+      - name: Execute pushplus  
         env:
           YOUR_PUSHPLUS_TOKEN: ${{ secrets.YOUR_PUSHPLUS_TOKEN }} 
-        run: bash qndxx.sh 
-            echo "Running Debug..."    
-            date  
-            echo "Current timezone:$TZ "  
-            echo "Current directory:$(pwd) " 
-            ls -la 
+        run: bash qndxx.sh  
       #- name: Execute xizhi.sh
       #  env:
-      #    XIZHI_TOKEN: ${{ secrets.XIZHI_TOKEN }} 
+      #    XIZHI_TOKEN: ${{ secrets.XIZHI_TOKEN }}  
       #  run: bash xizhi.sh
         
         
