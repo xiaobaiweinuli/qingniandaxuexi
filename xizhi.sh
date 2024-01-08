@@ -34,9 +34,9 @@ if [ "$pub_date" == "$current_date" ]; then
   echo "日期相同，发送 PushPlus 通知..."
 
   # 使用环境变量 xizhi_token
-XIZHI_TOKEN=$XIZHI_TOKEN
+  XIZHI_TOKEN=$XIZHI_TOKEN
 
-  if [ -z "$xizhi_token" ]; then
+  if [ -z "$XIZHI_TOKEN" ]; then
     echo "未设置 XIZHI_TOKEN，请设置环境变量 XIZHI_TOKEN"
     exit 1
   fi
