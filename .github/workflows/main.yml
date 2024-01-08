@@ -23,18 +23,19 @@ jobs:
         env:
           YOUR_PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }} 
         run: bash qndxx.sh
-      #- name: Execute xizhi.sh 
-      #  env:
-      #    XIZHI_TOKEN: ${{ secrets.XIZHI_TOKEN }}  
-      #  run: bash xizhi.sh
+      - name: Execute xizhi.sh 
+        env:
+          XIZHI_TOKEN: ${{ secrets.XIZHI_TOKEN }}  
+        run: bash xizhi.sh
         
         
-      #- name: Execute wxpusher.sh
-      #  run: |
-      #    chmod +x wxpusher.sh
-      #    ./wxpusher.sh
-      #  env:
-      #    wxpusher_token: ${{ secrets.wxpusher_token }}   另加脚本和环境变量
+      - name: Execute wxpusher.sh
+        run: |
+          chmod +x wxpusher.sh
+          ./wxpusher.sh
+        env:
+          wxpusher_token: ${{ secrets.wxpusher_token }}   
+      #另加脚本和环境变量
 #on: 
 #  schedule: 
 #    - cron: '25 12,13,15 * * *'  # 时间执行
