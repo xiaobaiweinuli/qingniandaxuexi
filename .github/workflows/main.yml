@@ -31,9 +31,9 @@ jobs:
         
         
       - name: Execute wxpusher.sh
-        run: bash WxPusher.sh
         env:
-          wxpusher_token: ${{ secrets.wxpusher_token }}   
+          wxpusher_token: ${{ secrets.wxpusher_token }}
+        run: bash WxPusher.sh   
       #另加脚本和环境变量
 #on: 
 #  schedule: 
