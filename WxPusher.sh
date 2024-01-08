@@ -18,11 +18,11 @@ response=$(curl -s -X GET "http://hnqndaxuexi.dahejs.cn/stw/news/list?&pageNumbe
 echo "JSON 数据获取成功"
 
 # 提取 pubDate 的值
-pub_date=$(echo "$response" | /data/user/0/com.termux/sh/jq -r '.obj.news.list[0].pubDate')
+pub_date=$(echo "$response" | jq -r '.obj.news.list[0].pubDate')
 echo "提取 pubDate 的值：$pub_date"
 
 # 提取 title 的值
-title_value=$(echo "$response" | /data/user/0/com.termux/sh/jq -r '.obj.news.list[0].title')
+title_value=$(echo "$response" | jq -r '.obj.news.list[0].title')
 echo "提取 title 的值：$title_value"
 
 # 获取当前日期
