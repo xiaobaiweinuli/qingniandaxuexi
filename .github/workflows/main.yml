@@ -23,6 +23,7 @@ jobs:
         env:
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }} 
         run: bash qndxx.sh
+
       - name: Execute xizhi.sh 
         env:
           XIZHI_TOKEN: ${{ secrets.XIZHI_TOKEN }}  
@@ -30,7 +31,7 @@ jobs:
         
         
       - name: Execute wxpusher.sh
-        run: bash wxpusher.sh
+        run: bash WxPusher.sh
         env:
           wxpusher_token: ${{ secrets.wxpusher_token }}   
       #另加脚本和环境变量
