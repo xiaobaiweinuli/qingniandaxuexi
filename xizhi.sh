@@ -34,7 +34,7 @@ if [ "$pub_date" == "$current_date" ]; then
   echo "日期相同，发送 PushPlus 通知..."
 
   # 使用环境变量 xizhi_token
-xizhi_token="$XIZHI_TOKEN"
+XIZHI_TOKEN="$XIZHI_TOKEN"
 
   if [ -z "$xizhi_token" ]; then
     echo "未设置 XIZHI_TOKENn，请设置环境变量 XIZHI_TOKEN"
@@ -45,7 +45,7 @@ xizhi_token="$XIZHI_TOKEN"
   content="$title_value：[http://hnqndaxuexi.dahejs.cn/study/studyList](http://hnqndaxuexi.dahejs.cn/study/studyList)"
   
 # 使用 curl 发送 POST 请求 频道推送
-push_response=$(curl -s -X POST "https://xizhi.qqoq.net/${xizhi_token}.channel?" -d "title=${title}&content=${content}")
+push_response=$(curl -s -X POST "https://xizhi.qqoq.net/${XIZHI_TOKEN}.channel?" -d "title=${title}&content=${content}")
   
   echo "息知 响应：$push_response"
   echo "推送通知已发送"
