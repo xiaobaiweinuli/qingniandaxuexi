@@ -42,15 +42,15 @@ if [ "$pub_date" == "$current_date" ]; then
   fi
 
   title="大学习更新-$pub_date"
-  content="$title_value:http://hnqndaxuexi.dahejs.cn/study/studyList"
+  content="$title_value：http://hnqndaxuexi.dahejs.cn/study/studyList"
   
   # 使用 curl 模拟发送链接
-  #push_response=$(curl -s -X POST "http://www.pushplus.plus/send" -d "token=$PUSHPLUS_TOKEN&title=$title&content=$content&template=markdown")
-  push_response=$(curl -s -X POST "http://www.pushplus.plus/send" \
-  -d "token=$PUSHPLUS_TOKEN" \
-  -d "title=$title" \
-  -d "content=$content" \
-  -d "template=markdown")
+  push_response=$(curl -s -X POST "http://www.pushplus.plus/send" -d "token=$PUSHPLUS_TOKEN&title=$title&content=$content&template=markdown")
+  #push_response=$(curl -s -X POST "http://www.pushplus.plus/send" \
+  #-d "token=$PUSHPLUS_TOKEN" \
+  #-d "title=$title" \
+  #-d "content=$content" \
+  #-d "template=markdown")
   
   echo "PushPlus 响应：$push_response"
   echo "推送通知已发送"
