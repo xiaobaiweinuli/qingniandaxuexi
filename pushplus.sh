@@ -46,9 +46,7 @@ if [ "$pub_date" == "$current_date" ]; then
   
   # 使用 curl 模拟发送链接
   #push_response=$(curl -s -X POST "http://www.pushplus.plus/send" -d "token=$pushplus_token&title=$title&content=$content&template=markdown")
-  push_response=$(curl -s -X POST 
-push
-"http://www.pushplus.plus/send" \
+  push_response=$(curl -s -X POST "http://www.pushplus.plus/send" \
   -d "token=$pushplus_token" \
   -d "title=$title" \
   -d "content=$content" \
