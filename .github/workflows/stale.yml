@@ -25,5 +25,5 @@ jobs:
         with :
           node-version: '14'
       - name: Execute pushplus
-         env:YOUR_PUSHPLUS_TOKEN:${{ secrets.YOUR_PUSHPLUS_TOKEN }}
+         env:PUSHPLUS_TOKEN:${{ secrets.PUSHPLUS_TOKEN }}
         run: bash qndxx.sh   
