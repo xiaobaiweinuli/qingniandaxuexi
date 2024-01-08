@@ -34,9 +34,9 @@ if [ "$pub_date" == "$current_date" ]; then
   echo "日期相同，发送 PushPlus 通知..."
 
   # 从环境变量中获取 PushPlus Token
-  pushplus_token=$PUSHPLUS_TOKEN
+  PUSHPLUS_TOKEN=$PUSHPLUS_TOKEN
 
-  if [ -z "$pushplus_token" ]; then
+  if [ -z "$PUSHPLUS_TOKEN" ]; then
     echo "未设置 PushPlus Token，请设置环境变量PUSHPLUS_TOKEN"
     exit 1
   fi
@@ -45,9 +45,9 @@ if [ "$pub_date" == "$current_date" ]; then
   content="$title_value:http://hnqndaxuexi.dahejs.cn/study/studyList"
   
   # 使用 curl 模拟发送链接
-  #push_response=$(curl -s -X POST "http://www.pushplus.plus/send" -d "token=$pushplus_token&title=$title&content=$content&template=markdown")
+  #push_response=$(curl -s -X POST "http://www.pushplus.plus/send" -d "token=$PUSHPLUS_TOKEN&title=$title&content=$content&template=markdown")
   push_response=$(curl -s -X POST "http://www.pushplus.plus/send" \
-  -d "token=$pushplus_token" \
+  -d "token=$PUSHPLUS_TOKEN" \
   -d "title=$title" \
   -d "content=$content" \
   -d "template=markdown")
