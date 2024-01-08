@@ -34,9 +34,9 @@ if [ "$pub_date" == "$current_date" ]; then
   echo "日期相同，发送 WxPusher 通知..."
 
   # 从环境变量中获取 WxPusher Token
-  WXPUSHER_TOKENn=$WXPUSHER_TOKEN
+  WXPUSHER_TOKEN=$WXPUSHER_TOKEN
 
-  if [ -z "$WxPusher_token" ]; then
+  if [ -z "$WXPUSHER_TOKEN" ]; then
     echo "未设置 WXPUSHER_TOKEN，请设置环境变量 WXPUSHER_TOKEN"
     exit 1
   fi
