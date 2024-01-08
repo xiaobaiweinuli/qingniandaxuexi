@@ -1,13 +1,15 @@
+#!/bin/bash
+
 # 设置请求头部信息
 headers=(
-  "/data/user/0/com.termux/sh/curl -H 'Accept-Encoding: gzip, deflate'"
-  "/data/user/0/com.termux/sh/curl -H 'Accept-Language: *'"
-  "/data/user/0/com.termux/sh/curl -H 'Content-Type: application/json'"
-  "/data/user/0/com.termux/sh/curl -H 'Host: hnqndaxuexi.dahejs.cn'"
-  "/data/user/0/com.termux/sh/curl -H 'Proxy-Connection: keep-alive'"
-  "/data/user/0/com.termux/sh/curl -H 'Referer: http://hnqndaxuexi.dahejs.cn/'"
-  "/data/user/0/com.termux/sh/curl -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 NetType/WIFI MicroMessenger/7.0.20.1781(0x6700143B) WindowsWechat(0x6309071d) XWEB/8519 Flue'"
-  "/data/user/0/com.termux/sh/curl -H 'accept: */*'"
+  "-H 'Accept-Encoding: gzip, deflate'"
+  "-H 'Accept-Language: *'"
+  "-H 'Content-Type: application/json'"
+  "-H 'Host: hnqndaxuexi.dahejs.cn'"
+  "-H 'Proxy-Connection: keep-alive'"
+  "-H 'Referer: http://hnqndaxuexi.dahejs.cn/'"
+  "-H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 NetType/WIFI MicroMessenger/7.0.20.1781(0x6700143B) WindowsWechat(0x6309071d) XWEB/8519 Flue'"
+  "-H 'accept: */*'"
 )
 
 # 发送 HTTP 请求以获取 JSON 数据
