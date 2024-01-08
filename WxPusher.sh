@@ -34,7 +34,7 @@ if [ "$pub_date" == "$current_date" ]; then
   echo "日期相同，发送 WxPusher 通知..."
 
   # 从环境变量中获取 WxPusher Token
-  WxPusher_token=$WXPUSHER_TOKEN
+  WXPUSHER_TOKENn=$WXPUSHER_TOKEN
 
   if [ -z "$WxPusher_token" ]; then
     echo "未设置 WXPUSHER_TOKEN，请设置环境变量 WXPUSHER_TOKEN"
@@ -48,7 +48,7 @@ if [ "$pub_date" == "$current_date" ]; then
 url="https://wxpusher.zjiecode.com/api/send/message"
 
 # 构建请求体数据
-data='{"appToken":"'$WxPusher_token'","content":"'$content'","summary":"'$title'","contentType":3,"topicIds":[24812],"verifyPay":false}'
+data='{"appToken":"'$WXPUSHER_TOKEN'","content":"'$content'","summary":"'$title'","contentType":3,"topicIds":[24812],"verifyPay":false}'
 
 response=$(curl -X POST -H "Content-Type: application/json" -d "${data}" "${url}")
 echo "WxPusher 响应：$response"
