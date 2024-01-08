@@ -30,9 +30,7 @@ jobs:
         
         
       - name: Execute wxpusher.sh
-        run: |
-          chmod +x wxpusher.sh
-          ./wxpusher.sh
+        run: bash wxpusher.sh
         env:
           wxpusher_token: ${{ secrets.wxpusher_token }}   
       #另加脚本和环境变量
