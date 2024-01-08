@@ -45,7 +45,7 @@ if [ "$pub_date" == "$current_date" ]; then
   content="$title_value：[http://hnqndaxuexi.dahejs.cn/study/studyList](http://hnqndaxuexi.dahejs.cn/study/studyList)"
   
 # 使用 curl 发送 POST 请求 频道推送
-push_response=$(curl -s -X POST "https://xizhi.qqoq.net/${XIZHI_TOKEN}.channel?" -d "title=${title}&content=${content}")
+push_response=$(curl -s -X POST "https://xizhi.qqoq.net/${XIZHI_TOKEN}.send?" -d "title=${title}&content=${content}")
   
   echo "息知 响应：$push_response"
   echo "推送通知已发送"
