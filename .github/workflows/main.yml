@@ -22,7 +22,7 @@ jobs:
       - name: Execute pushplus
         env:
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }} 
-        run: bash qndxx.sh
+        run: bash pushplus.sh
 
       #- name: Execute xizhi.sh 
       #  env:
