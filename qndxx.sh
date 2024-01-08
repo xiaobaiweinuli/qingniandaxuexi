@@ -34,10 +34,10 @@ if [ "$pub_date" == "$current_date" ]; then
   echo "日期相同，发送 PushPlus 通知..."
 
   # 从环境变量中获取 PushPlus Token
-  pushplus_token=$YOUR_PUSHPLUS_TOKEN
+  pushplus_token=$PUSHPLUS_TOKEN
 
   if [ -z "$pushplus_token" ]; then
-    echo "未设置 PushPlus Token，请设置环境变量 YOUR_PUSHPLUS_TOKEN"
+    echo "未设置 PushPlus Token，请设置环境变量PUSHPLUS_TOKEN"
     exit 1
   fi
 
