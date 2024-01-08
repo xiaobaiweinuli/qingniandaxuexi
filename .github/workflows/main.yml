@@ -21,10 +21,10 @@ jobs:
           
       - name: Execute pushplus
         env:
-          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }} 
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+          echo "Token: $PUSHPLUS_TOKEN"
         run: bash pushplus.sh
-      - name: Debug GitHub context
-        run: echo "Token: $PUSHPLUS_TOKEN, Context: $GITHUB_CONTEXT"
+        echo "Token: $PUSHPLUS_TOKEN"
 
       #- name: Execute xizhi.sh 
       #  env:
