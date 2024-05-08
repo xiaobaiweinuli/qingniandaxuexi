@@ -2,7 +2,7 @@ name: Daily Notification
 
 on:
   schedule:
-    - cron: '15 2,5,10,13 * * *'   # UTC时间执行，定时时间加8为运行时间
+    - cron: '45 2,5,10 * * *'   # UTC时间执行，定时时间加8为运行时间
   workflow_dispatch:  # 允许手动触发
 
       
